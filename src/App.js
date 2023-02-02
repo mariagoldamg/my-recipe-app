@@ -46,7 +46,7 @@ const finalSearch =(e)=> {
     <input className='search' placeholder='Search...' onChange = {myRecipeSearch} value = { mySearch }>
     </input>
   </form>
-  <button>search</button>
+  <button onClick ={finalSearch}>search</button>
 </div>
 
 <div className='container'>
