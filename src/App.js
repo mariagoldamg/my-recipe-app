@@ -29,6 +29,7 @@ const myRecipeSearch =(e)=>{
 const finalSearch =(e)=> {
   e.preventDefault();
   setWordSubmit(mySearch);
+  setMySearch('') //emptied input
 }
 
   return (
@@ -45,12 +46,14 @@ const finalSearch =(e)=> {
   <form onSubmit={finalSearch} >
     <input className='search' placeholder='Search...' onChange = {myRecipeSearch} value = { mySearch }>
     </input>
+   <div className='container'> <button>search</button>
+   </div>
   </form>
-  <button onClick ={finalSearch}>search</button>
+
 </div>
 
 <div className='container'>
-{myRecipies.map(element=>(
+{myRecipies.map((element,index)=>(
   <Recipies 
   label={element.recipe.label}
   image = {element.recipe.image}
@@ -58,7 +61,7 @@ const finalSearch =(e)=> {
   calories = {element.recipe.calories}
   cuisine = {element.recipe.cuisineType}
   diet = {element.recipe.dietLabels}
-
+ key = {index}
   />
 ))}
 
