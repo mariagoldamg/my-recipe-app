@@ -11,8 +11,12 @@ video {
 
 .container {
   display: flex;
-  flex-direction: column;
- align-items: center;
+flex-direction: column;
+align-items: center;
+}
+
+.recipe {
+  margin-top:50px;
 }
  h1,h2,p {
   font-family: 'Open Sans', sans-serif;
@@ -60,9 +64,6 @@ li{
 
 }
 
-.recipe {
-  margin-top:50px;
-}
 
 img {
   background-color: antiquewhite;
